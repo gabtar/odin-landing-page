@@ -1,0 +1,225 @@
+/* TODO achichar tamanio de la fuente al pasar a mobile*/
+/* TODO Elegir otra paleta de colores / fuentes / tematica */
+/* TODO agregar imagenes etc */
+/* TODO dejar todo responsive */
+:root {
+  --dark-1: #1F2937;
+  --light-1: #3883f6;
+  --white: #FFF; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-container {
+  text-align: center;
+  padding: 1em 10%;
+  background-color: var(--dark-1);
+}
+
+.nav-menu ul li{
+  list-style: none; 
+  padding: .2em;
+  margin-top: 1em;
+}
+
+.nav-logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--white);
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: #E5E7EB;
+}
+
+.nav-link:hover {
+  color: #5577BB;
+}
+
+.hero-container {
+  background-color: var(--dark-1);
+  padding: 1em 10%;
+}
+
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em 0;
+}
+
+.hero-description h1 {
+ font-size: 48px;
+ font-weight: 1000;
+ color: var(--white);
+}
+
+.hero-description p {
+  font-size: 18px;
+  color: #E5E7EB;
+}
+
+.hero-image {
+  background-color: #EEE;
+}
+
+.btn {
+  background-color: var(--light-1);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 5em;
+  padding: .6em;
+  border: 0;
+  cursor: pointer;
+  width: 10em;
+  height: 3em;
+}
+
+.btn:hover {
+  background-color: #1863E6;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #FFF;
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 5em;
+  padding: .6em;
+  cursor: pointer;
+  width: 10em;
+  height: 3em;
+}
+
+.information-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: #1F2937;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.information-container {
+  text-align: center;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  background-color: var(--dark-1);
+  border-radius: 5%;
+  margin: auto;
+}
+
+.card-text {
+ font-size: 18px;
+ padding: 1em 0;
+ margin-bottom: 5em;
+ color: var(--dark-1);
+}
+
+.quote {
+  background-color: #E5E7EB;
+  padding: 5em 10%;
+}
+
+.quote-text {
+  font-size: 36px;
+  font-weight: 300;
+  font-style: italic;
+  color: #1F2937;
+}
+
+.quote-author {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--dark-1);
+}
+
+.banner-container {
+  margin: 10%;
+}
+
+.banner {
+  background-color: var(--light-1);
+  border-radius: 1em;
+  padding: 3em;
+}
+
+.banner-text .banner-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #FFF;
+}
+
+.banner-text .banner-description {
+  font-size: 18px;
+  color: #FFF;
+}
+
+.footer {
+  font-size: 24px;
+  background-color: var(--dark-1);
+  color: #FFF;
+  text-align: center;
+  padding: 2em;
+}
+
+/* Tablet */
+@media screen and (min-width: 500px) {
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-menu ul li {
+    display: inline;
+  }
+
+  .hero-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5em 10%;
+    gap: 2em;
+  }
+
+  .hero-description {
+    width: 50%;
+  }
+
+  .hero-image {
+    width: 50%;
+  }
+
+  .information-container {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+  }
+
+  .banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3em;
+  }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 900px) {
+
+}
