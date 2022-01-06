@@ -1,11 +1,13 @@
-/* TODO achichar tamanio de la fuente al pasar a mobile*/
-/* TODO Elegir otra paleta de colores / fuentes / tematica */
-/* TODO agregar imagenes etc */
-/* TODO dejar todo responsive */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
 :root {
-  --dark-1: #1F2937;
-  --light-1: #3883f6;
   --white: #FFF; 
+   
+  --light-gray: #cfcfcf;
+  --light: #f7bebe;
+  --light-alternate: #d9adad;
+  --dark-contrast: #f71919;
+  --dark: #412434; 
 }
 
 * {
@@ -16,12 +18,17 @@
 img {
   max-width: 100%;
   height: auto;
+  border: 2px solid var(--light);
+}
+
+body {
+  font-family: Raleway, sans-serif;
 }
 
 .nav-container {
   text-align: center;
   padding: 1em 10%;
-  background-color: var(--dark-1);
+  background-color: var(--dark);
 }
 
 .nav-menu ul li{
@@ -32,22 +39,23 @@ img {
 
 .nav-logo {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5em;
   color: var(--white);
 }
 
 .nav-link {
   text-decoration: none;
-  font-size: 18px;
-  color: #E5E7EB;
+  font-size: 1.125em;
+  color: var(--light-alternate);
 }
 
 .nav-link:hover {
-  color: #5577BB;
+  color: var(--light);
+  border-bottom: 2px solid var(--light);
 }
 
 .hero-container {
-  background-color: var(--dark-1);
+  background-color: var(--dark);
   padding: 1em 10%;
 }
 
@@ -59,22 +67,22 @@ img {
 }
 
 .hero-description h1 {
- font-size: 48px;
+ font-size: 3em;
  font-weight: 1000;
  color: var(--white);
 }
 
 .hero-description p {
-  font-size: 18px;
-  color: #E5E7EB;
+  font-size: 1.125em;
+  color: var(--light-alternate);
 }
 
-.hero-image {
-  background-color: #EEE;
+.hero-image img {
+  border-radius: 5%;
 }
 
 .btn {
-  background-color: var(--light-1);
+  background-color: var(--dark-contrast);
   color: var(--white);
   font-weight: bold;
   border-radius: 5em;
@@ -86,7 +94,7 @@ img {
 }
 
 .btn:hover {
-  background-color: #1863E6;
+  background-color: var(--light);
 }
 
 .btn-outline {
@@ -99,52 +107,59 @@ img {
   cursor: pointer;
   width: 10em;
   height: 3em;
+  margin: 5% 0;
+}
+
+.btn-outline:hover {
+  background-color: var(--white);
+  color: var(--dark-contrast);
 }
 
 .information-title {
-  font-size: 36px;
+  font-size: 2.25em;
   font-weight: 900;
-  color: #1F2937;
+  color: var(--dark);
   text-align: center;
   margin: 1em 0;
 }
 
 .information-container {
   text-align: center;
+  margin: auto 5%;
 }
 
-.card-image {
-  width: 200px;
-  height: 200px;
-  background-color: var(--dark-1);
+.card-image img {
+  cursor: pointer;
   border-radius: 5%;
-  margin: auto;
+}
+.card-image img:hover {
+  opacity: .8;
 }
 
 .card-text {
- font-size: 18px;
+ font-size: 1.125em;
  padding: 1em 0;
- margin-bottom: 5em;
- color: var(--dark-1);
+ margin-bottom: 2em;
+ color: var(--dark);
 }
 
 .quote {
-  background-color: #E5E7EB;
+  background-color: var(--light-gray);
   padding: 5em 10%;
 }
 
 .quote-text {
-  font-size: 36px;
+  font-size: 2.25em;
   font-weight: 300;
   font-style: italic;
-  color: #1F2937;
+  color: var(--dark);
 }
 
 .quote-author {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 1.5em;
+  font-weight: bold;
   text-align: right;
-  color: var(--dark-1);
+  color: var(--dark);
 }
 
 .banner-container {
@@ -152,32 +167,32 @@ img {
 }
 
 .banner {
-  background-color: var(--light-1);
+  background-color: var(--dark-contrast);
   border-radius: 1em;
-  padding: 3em;
+  padding: 1.5em;
 }
 
 .banner-text .banner-title {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 1.5em;
+  font-weight: bold;
   color: #FFF;
 }
 
 .banner-text .banner-description {
-  font-size: 18px;
+  font-size: 1.125em;
   color: #FFF;
 }
 
 .footer {
-  font-size: 24px;
-  background-color: var(--dark-1);
+  font-size: 1.2em;
+  background-color: var(--dark);
   color: #FFF;
   text-align: center;
-  padding: 2em;
+  padding: 1.5em;
 }
 
 /* Tablet */
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 576px) {
 
   .nav-container {
     display: flex;
@@ -192,6 +207,7 @@ img {
   .hero-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 5em 10%;
     gap: 2em;
   }
@@ -206,8 +222,13 @@ img {
 
   .information-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 5em;
+  }
+
+  .card {
+    width: calc(50% - 5em);
   }
 
   .banner {
@@ -216,10 +237,12 @@ img {
     align-items: center;
     gap: 3em;
   }
-
 }
 
 /* Desktop */
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 992px) {
 
+  .card {
+    width: calc(25% - 5em);
+  }
 }
